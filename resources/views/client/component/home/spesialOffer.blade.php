@@ -1,5 +1,5 @@
 <div class="container-fluid px-4 py-5 bg-light" id="custom-cards">
-    <h2 class="pb-2 text-center text-black">Popular desinations</h2>
+    <h2 class="pb-2 text-center text-black">Special Offer</h2>
 
     @php
         $image = ['https://i.pinimg.com/564x/a9/38/d1/a938d141053d1332529f0cd308978b99.jpg', 'https://i.pinimg.com/564x/45/0e/08/450e084ea4e1f20025a745fab37c0ed4.jpg', 'https://i.pinimg.com/564x/f9/cf/3a/f9cf3a375a50cdb9f46e83d7f975de70.jpg', 'https://i.pinimg.com/564x/43/45/04/4345047a334176fc672847a0be61939d.jpg'];
@@ -17,10 +17,20 @@
 
                 <div class="container-popular-list">
                     @for ($i = 0; $i < $list_count; $i++)
-                        <div>
-                            <img src="{{ $image[$i] }}" class="img" alt="...">
-                            <p class="text-black ms-2 fs-4">{{ $name[$i] }}</p>
-                            <p class="text-black ms-2"><i class="fa-solid fa-location-dot"></i> {{ $location[$i] }}</p>
+                        <div class="card text-black m-2 card-custom">
+                            <img src="{{ $image[$i] }}" class="card-img-top img " alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                @for ($j = 0; $j <= 5; $j++)
+                                    <i class="fa-solid fa-star"></i>
+                                @endfor
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of
+                                    the card's content.</p>
+                                <p class="mt-4 ms-2">From $500</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     @endfor
                 </div>
