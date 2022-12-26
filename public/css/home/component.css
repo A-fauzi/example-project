@@ -24,8 +24,31 @@ width: 320px;
 height: 700px;
 }
 
+ul li {
+display: inline;
+list-style: none;
+}
+
 .container-popular-list {
 display: flex;
 flex-direction: row;
 justify-content: center;
+}
+.container-recently {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+}
+
+.card-testi {
+width: 20%;
+box-shadow: 0 5px 10px rgba(0,0,0,.2);
+border-radius: 2em;
+}
+
+.card-container-testi {
+display: flex;
+flex-direction: row;
+justify-content: center;
+justify-content: space-evenly;
 }
